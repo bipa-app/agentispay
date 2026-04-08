@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://agentispay.com">
-    <img src="assets/logo.png" alt="Agentis Pay" width="500" />
+  <a href="https://agents.bipa.app">
+    <img src="assets/logo.png" alt="Bipa CLI" width="500" />
   </a>
 </p>
 
@@ -9,16 +9,16 @@
 </p>
 
 <p align="center">
-  <a href="https://agentispay.com">Website</a> ·
-  <a href="https://agentispay.com/docs">Docs</a> ·
-  <a href="https://github.com/bipa-app/agentispay/releases">Releases</a>
+  <a href="https://agents.bipa.app">Website</a> ·
+  <a href="https://agents.bipa.app/docs">Docs</a> ·
+  <a href="https://github.com/bipa-app/bipa-cli/releases">Releases</a>
 </p>
 
 ---
 
-## What is Agentis Pay?
+## What is Bipa CLI?
 
-Agentis Pay gives AI agents a programmable payment account. Agents can check balances, read transaction history, and send Pix transfers — all through a secure MCP (Model Context Protocol) server that plugs into Claude, ChatGPT, Cursor, Windsurf, VS Code, and any MCP-compatible host.
+Bipa CLI gives AI agents a programmable payment account. Agents can check balances, read transaction history, and send Pix transfers — all through a secure MCP (Model Context Protocol) server that plugs into Claude, ChatGPT, Cursor, Windsurf, VS Code, and any MCP-compatible host.
 
 ### Key capabilities
 
@@ -33,59 +33,59 @@ Agentis Pay gives AI agents a programmable payment account. Agents can check bal
 
 ## Agent Skill
 
-Install the Agentis Pay skill to give your AI agent full knowledge of how to use Agentis Pay — including account setup, Pix payments, and all available tools:
+Install the Bipa CLI skill to give your AI agent full knowledge of how to use Bipa CLI — including account setup, Pix payments, and all available tools:
 
 ```bash
-npx skills add bipa-app/agentispay
+npx skills add bipa-app/bipa-cli
 ```
 
 The skill teaches your agent how to:
 - Help users open a Bipa account and complete onboarding
-- Install and authenticate the Agentis Pay CLI
+- Install and authenticate the Bipa CLI
 - Make Pix payments, check balances, decode QR codes
 - Analyze transaction history and detect patterns
 
 You can also view the skill reference directly from the CLI:
 
 ```bash
-agentis-pay skill
+bipa skill
 ```
 
 ## Install
 
 ```bash
-curl -fsSL https://agentispay.com/install.sh | sh
+curl -fsSL https://agents.bipa.app/install.sh | sh
 ```
 
-The managed installer places a launcher in `~/.local/bin/agentis-pay` and keeps versioned binaries under `~/.agentis-pay/`.
+The managed installer places a launcher in `~/.local/bin/bipa` and keeps versioned binaries under `~/.bipa/`.
 
 Optional flags:
 
 ```bash
 # Custom binary directory
-curl -fsSL https://agentispay.com/install.sh | sh -s -- --bin-dir /usr/local/bin
+curl -fsSL https://agents.bipa.app/install.sh | sh -s -- --bin-dir /usr/local/bin
 
 # Pin a specific version
-curl -fsSL https://agentispay.com/install.sh | sh -s -- --version v0.1.2
+curl -fsSL https://agents.bipa.app/install.sh | sh -s -- --version v0.1.2
 ```
 
 ## Quick start
 
 ```bash
 # Authenticate (prints URL for agents, --open to launch browser)
-agentis-pay login --web
+bipa login --web
 
 # Install the MCP server for Claude Desktop
-agentis-pay mcp install --client claude
+bipa mcp install --client claude
 
 # Check your balance
-agentis-pay pix balance
+bipa pix balance
 
 # Send a Pix payment
-agentis-pay pix pay --key alice@example.com --amount 25,00 --note "coffee" --agent-message "Paying Alice for coffee"
+bipa pix pay --key alice@example.com --amount 25,00 --note "coffee" --agent-message "Paying Alice for coffee"
 
 # View recent transactions
-agentis-pay pix history --limit 5
+bipa pix history --limit 5
 ```
 
 ## MCP tools
@@ -94,34 +94,33 @@ Once installed, Claude Desktop (or any MCP host) can use these tools:
 
 | Tool | Description |
 |---|---|
-| `agentispay_whoami` | Session status |
-| `agentispay_account` | Account profile and metadata |
-| `agentispay_balance` | Available balance in cents |
-| `agentispay_history` | Transaction history (list or detail) |
-| `agentispay_deposit` | Pix keys for receiving deposits |
-| `agentispay_pix_keys` | Configured Pix keys |
-| `agentispay_limits` | Transfer risk limits |
-| `agentispay_brcode_decode` | Decode Pix BR Code payloads |
-| `agentispay_pay` | Create a Pix transfer |
-| `agentispay_pix_send` | Alias for `agentispay_pay` |
+| `bipa_whoami` | Session status |
+| `bipa_account` | Account profile and metadata |
+| `bipa_balance` | Available balance in cents |
+| `bipa_history` | Transaction history (list or detail) |
+| `bipa_deposit` | Pix keys for receiving deposits |
+| `bipa_pix_keys` | Configured Pix keys |
+| `bipa_limits` | Transfer risk limits |
+| `bipa_pix_brcode_decode` | Decode Pix BR Code payloads |
+| `bipa_pix_pay_key` | Create a Pix transfer |
 
-A remote MCP server is also available at `https://mcp.agentispay.com/mcp` with automatic OAuth 2.1 authentication — no local install required.
+A remote MCP server is also available at `https://mcp.bipa.app/mcp` with automatic OAuth 2.1 authentication — no local install required.
 
 ## Releases
 
-This repository hosts pre-built binaries for every release. The managed installer downloads from the [Releases](https://github.com/bipa-app/agentispay/releases) page.
+This repository hosts pre-built binaries for every release. The managed installer downloads from the [Releases](https://github.com/bipa-app/bipa-cli/releases) page.
 
 | Platform | Architecture | Asset |
 |---|---|---|
-| macOS | Apple Silicon | `agentis-pay-vX.Y.Z-darwin-arm64.tar.gz` |
-| macOS | Intel | `agentis-pay-vX.Y.Z-darwin-x64.tar.gz` |
-| Linux | x86_64 | `agentis-pay-vX.Y.Z-linux-x64.tar.gz` |
-| Linux | ARM64 | `agentis-pay-vX.Y.Z-linux-arm64.tar.gz` |
+| macOS | Apple Silicon | `bipa-vX.Y.Z-darwin-arm64.tar.gz` |
+| macOS | Intel | `bipa-vX.Y.Z-darwin-x64.tar.gz` |
+| Linux | x86_64 | `bipa-vX.Y.Z-linux-x64.tar.gz` |
+| Linux | ARM64 | `bipa-vX.Y.Z-linux-arm64.tar.gz` |
 
 ## Links
 
-- **Website**: [agentispay.com](https://agentispay.com)
-- **Docs**: [agentispay.com/docs](https://agentispay.com/docs)
+- **Website**: [agents.bipa.app](https://agents.bipa.app)
+- **Docs**: [agents.bipa.app/docs](https://agents.bipa.app/docs)
 
 ## License
 
