@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://agentispay.com">
+  <a href="https://agents.bipa.app">
     <img src="assets/logo.png" alt="Bipa CLI" width="500" />
   </a>
 </p>
@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://agentispay.com">Website</a> ·
-  <a href="https://agentispay.com/docs">Docs</a> ·
+  <a href="https://agents.bipa.app">Website</a> ·
+  <a href="https://agents.bipa.app/docs">Docs</a> ·
   <a href="https://github.com/bipa-app/agentispay/releases">Releases</a>
 </p>
 
@@ -54,7 +54,7 @@ bipa skill
 ## Install
 
 ```bash
-curl -fsSL https://agentispay.com/install.sh | sh
+curl -fsSL https://agents.bipa.app/install.sh | sh
 ```
 
 The managed installer places a launcher in `~/.local/bin/bipa` and keeps versioned binaries under `~/.bipa/`.
@@ -63,10 +63,10 @@ Optional flags:
 
 ```bash
 # Custom binary directory
-curl -fsSL https://agentispay.com/install.sh | sh -s -- --bin-dir /usr/local/bin
+curl -fsSL https://agents.bipa.app/install.sh | sh -s -- --bin-dir /usr/local/bin
 
 # Pin a specific version
-curl -fsSL https://agentispay.com/install.sh | sh -s -- --version v0.1.2
+curl -fsSL https://agents.bipa.app/install.sh | sh -s -- --version v0.1.2
 ```
 
 ## Quick start
@@ -120,8 +120,8 @@ This repository hosts pre-built binaries for every release. The managed installe
 
 ## Links
 
-- **Website**: [agentispay.com](https://agentispay.com)
-- **Docs**: [agentispay.com/docs](https://agentispay.com/docs)
+- **Website**: [agentispay.com](https://agents.bipa.app)
+- **Docs**: [agentispay.com/docs](https://agents.bipa.app/docs)
 
 ## License
 
