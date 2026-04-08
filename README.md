@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://agents.bipa.app">Website</a> ·
   <a href="https://agents.bipa.app/docs">Docs</a> ·
-  <a href="https://github.com/bipa-app/agentispay/releases">Releases</a>
+  <a href="https://github.com/bipa-app/bipa-cli/releases">Releases</a>
 </p>
 
 ---
@@ -36,7 +36,7 @@ Bipa CLI gives AI agents a programmable payment account. Agents can check balanc
 Install the Bipa CLI skill to give your AI agent full knowledge of how to use Bipa CLI — including account setup, Pix payments, and all available tools:
 
 ```bash
-npx skills add bipa-app/agentispay
+npx skills add bipa-app/bipa-cli
 ```
 
 The skill teaches your agent how to:
@@ -94,22 +94,21 @@ Once installed, Claude Desktop (or any MCP host) can use these tools:
 
 | Tool | Description |
 |---|---|
-| `agentispay_whoami` | Session status |
-| `agentispay_account` | Account profile and metadata |
-| `agentispay_balance` | Available balance in cents |
-| `agentispay_history` | Transaction history (list or detail) |
-| `agentispay_deposit` | Pix keys for receiving deposits |
-| `agentispay_pix_keys` | Configured Pix keys |
-| `agentispay_limits` | Transfer risk limits |
-| `agentispay_brcode_decode` | Decode Pix BR Code payloads |
-| `agentispay_pay` | Create a Pix transfer |
-| `agentispay_pix_send` | Alias for `agentispay_pay` |
+| `bipa_whoami` | Session status |
+| `bipa_account` | Account profile and metadata |
+| `bipa_balance` | Available balance in cents |
+| `bipa_history` | Transaction history (list or detail) |
+| `bipa_deposit` | Pix keys for receiving deposits |
+| `bipa_pix_keys` | Configured Pix keys |
+| `bipa_limits` | Transfer risk limits |
+| `bipa_pix_brcode_decode` | Decode Pix BR Code payloads |
+| `bipa_pix_pay_key` | Create a Pix transfer |
 
-A remote MCP server is also available at `https://mcp.agentispay.com/mcp` with automatic OAuth 2.1 authentication — no local install required.
+A remote MCP server is also available at `https://mcp.bipa.app/mcp` with automatic OAuth 2.1 authentication — no local install required.
 
 ## Releases
 
-This repository hosts pre-built binaries for every release. The managed installer downloads from the [Releases](https://github.com/bipa-app/agentispay/releases) page.
+This repository hosts pre-built binaries for every release. The managed installer downloads from the [Releases](https://github.com/bipa-app/bipa-cli/releases) page.
 
 | Platform | Architecture | Asset |
 |---|---|---|
@@ -120,8 +119,8 @@ This repository hosts pre-built binaries for every release. The managed installe
 
 ## Links
 
-- **Website**: [agentispay.com](https://agents.bipa.app)
-- **Docs**: [agentispay.com/docs](https://agents.bipa.app/docs)
+- **Website**: [agents.bipa.app](https://agents.bipa.app)
+- **Docs**: [agents.bipa.app/docs](https://agents.bipa.app/docs)
 
 ## License
 
