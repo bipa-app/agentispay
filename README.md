@@ -42,10 +42,10 @@ Bipa CLI gives AI agents a programmable payment account. Agents can check balanc
 
 A few real-world workflows people build with Bipa CLI:
 
-- **Pay freelancers and bills from your editor.** Ask Claude Code or Cursor to send a Pix mid-coding session — no context switch.
-- **Build a personal finance dashboard.** Use Replit Agent or Lovable to ship your own UI with real Pix balances, transactions, and payments as the data source.
-- **Automate recurring payments.** Wire n8n workflows that trigger on email/calendar/webhook and request a Pix — you approve in the app.
-- **Audit and analyze.** Ask any MCP-aware agent: *"show all my transfers to João this quarter"* or *"how much did I spend on rideshare in March?"*
+- **Split bills with friends and family.** *"Send R$ 35 to Maria for yesterday's lunch"* — your agent drafts the Pix, you confirm with Face ID.
+- **Pay your monthly bills.** Rent, utilities, streaming subscriptions — ask any MCP-aware agent and approve in the Bipa app.
+- **Build your own personal finance dashboard.** Use Replit Agent or Lovable to ship a UI with real Pix balances, transactions, and spending categories.
+- **Audit and analyze your spending.** *"How much did I spend on rideshare last month?"* / *"Show all my Pix to my landlord this year."*
 
 Every payment still requires biometric approval in the Bipa mobile app — agents request, you authorize.
 
