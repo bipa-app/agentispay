@@ -9,9 +9,21 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/bipa-app/bipa-cli/releases"><img src="https://img.shields.io/github/v/release/bipa-app/bipa-cli?label=release" alt="Latest release" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="License: MIT" /></a>
+  <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-server-blue" alt="MCP server" /></a>
+</p>
+
+<p align="center">
   <a href="https://agents.bipa.app">Website</a> ·
   <a href="https://agents.bipa.app/docs">Docs</a> ·
-  <a href="https://github.com/bipa-app/bipa-cli/releases">Releases</a>
+  <a href="https://github.com/bipa-app/bipa-cli/releases">Releases</a> ·
+  <a href="https://agents.bipa.app/docs/seguranca">Security model</a>
+</p>
+
+<p align="center">
+  <a href="https://apps.apple.com/br/app/bipa/id1516842324"><img src="https://img.shields.io/badge/Download-App%20Store-black?logo=apple&logoColor=white" alt="Download on the App Store" /></a>
+  <a href="https://play.google.com/store/apps/details?id=bipa.app.bipa"><img src="https://img.shields.io/badge/Get%20it%20on-Google%20Play-414141?logo=googleplay&logoColor=white" alt="Get it on Google Play" /></a>
 </p>
 
 ---
@@ -30,6 +42,38 @@ Bipa CLI gives AI agents a programmable payment account. Agents can check balanc
 | **MCP server** | First-class integration with AI agent hosts |
 | **OAuth login** | Secure browser-based authentication flow |
 | **Keyring storage** | Credentials stored in OS-native keychain |
+
+## What can your agent do?
+
+A few real-world workflows people build with Bipa CLI:
+
+- **Split bills with friends and family.** *"Send R$ 35 to Maria for yesterday's lunch"* — your agent drafts the Pix, you confirm with Face ID.
+- **Pay your monthly bills.** Rent, utilities, streaming subscriptions — ask any MCP-aware agent and approve in the Bipa app.
+- **Build your own personal finance dashboard.** Use Replit Agent or Lovable to ship a UI with real Pix balances, transactions, and spending categories.
+- **Audit and analyze your spending.** *"How much did I spend on rideshare last month?"* / *"Show all my Pix to my landlord this year."*
+
+Every payment still requires biometric approval in the Bipa mobile app — agents request, you authorize.
+
+## Supported AI agents
+
+Jump straight to the setup guide for your stack:
+
+| Agent | Transport | Setup guide |
+|---|---|---|
+| Claude (Desktop & Claude.ai) | Local + Remote | [docs/claude](https://agents.bipa.app/docs/claude) |
+| Claude Code | Local + Remote | [docs/claude-code](https://agents.bipa.app/docs/claude-code) |
+| ChatGPT | Remote | [docs/chatgpt](https://agents.bipa.app/docs/chatgpt) |
+| Cursor | Local + Remote | [docs/cursor](https://agents.bipa.app/docs/cursor) |
+| Gemini CLI | Local | [docs/gemini](https://agents.bipa.app/docs/gemini) |
+| Codex | Local | [docs/codex](https://agents.bipa.app/docs/codex) |
+| OpenClaw | Local | [docs/openclaw](https://agents.bipa.app/docs/openclaw) |
+| n8n | Remote | [docs/n8n](https://agents.bipa.app/docs/n8n) |
+| Antigravity | Local + Remote | [docs/antigravity](https://agents.bipa.app/docs/antigravity) |
+| Grok | Remote | [docs/grok](https://agents.bipa.app/docs/grok) |
+| Replit | Remote | [docs/replit](https://agents.bipa.app/docs/replit) |
+| Lovable | Remote | [docs/lovable](https://agents.bipa.app/docs/lovable) |
+
+Don't see your host? Any MCP-compatible client works with the remote server at `https://mcp.bipa.app/mcp`.
 
 ## Agent Skill
 
@@ -50,6 +94,18 @@ You can also view the skill reference directly from the CLI:
 ```bash
 bipa skill
 ```
+
+## Before you start
+
+You need a **Bipa account** and the **Bipa mobile app** to use the CLI — the app is where you approve every Pix payment with biometrics.
+
+1. **Create a free Bipa account** at [bipa.app](https://bipa.app) (under 2 minutes, no fees).
+2. **Install the mobile app:**
+   - [App Store (iOS)](https://apps.apple.com/br/app/bipa/id1516842324)
+   - [Google Play (Android)](https://play.google.com/store/apps/details?id=bipa.app.bipa)
+3. Complete onboarding in the app — you'll need this to authorize agent requests.
+
+> Bipa is currently available for residents of Brazil 🇧🇷.
 
 ## Install
 
@@ -106,6 +162,17 @@ Once installed, Claude Desktop (or any MCP host) can use these tools:
 
 A remote MCP server is also available at `https://mcp.bipa.app/mcp` with automatic OAuth 2.1 authentication — no local install required.
 
+## Security & approvals
+
+Bipa CLI is designed so that **agents request, humans authorize**:
+
+- Every Pix payment requires biometric approval in the Bipa mobile app — the CLI never moves money on its own.
+- Spending limits are configurable per day, per transaction, and per recipient.
+- Credentials are stored in your OS-native keychain (Keychain on macOS, Secret Service on Linux, Credential Manager on Windows).
+- The remote MCP server uses OAuth 2.1 with PKCE — short-lived tokens, no shared secrets.
+
+Full architecture: [agents.bipa.app/docs/seguranca](https://agents.bipa.app/docs/seguranca).
+
 ## Releases
 
 This repository hosts pre-built binaries for every release. The managed installer downloads from the [Releases](https://github.com/bipa-app/bipa-cli/releases) page.
@@ -121,6 +188,12 @@ This repository hosts pre-built binaries for every release. The managed installe
 
 - **Website**: [agents.bipa.app](https://agents.bipa.app)
 - **Docs**: [agents.bipa.app/docs](https://agents.bipa.app/docs)
+- **Security model**: [agents.bipa.app/docs/seguranca](https://agents.bipa.app/docs/seguranca)
+- **Open an account**: [bipa.app](https://bipa.app)
+- **Mobile app — iOS**: [App Store](https://apps.apple.com/br/app/bipa/id1516842324)
+- **Mobile app — Android**: [Google Play](https://play.google.com/store/apps/details?id=bipa.app.bipa)
+- **Releases**: [github.com/bipa-app/bipa-cli/releases](https://github.com/bipa-app/bipa-cli/releases)
+- **Bug reports & feedback**: [GitHub Issues](https://github.com/bipa-app/bipa-cli/issues)
 
 ## License
 
