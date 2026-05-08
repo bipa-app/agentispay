@@ -21,6 +21,11 @@
   <a href="https://agents.bipa.app/docs/seguranca">Security model</a>
 </p>
 
+<p align="center">
+  <a href="https://apps.apple.com/br/app/bipa/id1516842324"><img src="https://img.shields.io/badge/Download-App%20Store-black?logo=apple&logoColor=white" alt="Download on the App Store" /></a>
+  <a href="https://play.google.com/store/apps/details?id=bipa.app.bipa"><img src="https://img.shields.io/badge/Get%20it%20on-Google%20Play-414141?logo=googleplay&logoColor=white" alt="Get it on Google Play" /></a>
+</p>
+
 ---
 
 ## What is Bipa CLI?
@@ -89,6 +94,18 @@ You can also view the skill reference directly from the CLI:
 ```bash
 bipa skill
 ```
+
+## Before you start
+
+You need a **Bipa account** and the **Bipa mobile app** to use the CLI — the app is where you approve every Pix payment with biometrics.
+
+1. **Create a free Bipa account** at [bipa.app](https://bipa.app) (under 2 minutes, no fees).
+2. **Install the mobile app:**
+   - [App Store (iOS)](https://apps.apple.com/br/app/bipa/id1516842324)
+   - [Google Play (Android)](https://play.google.com/store/apps/details?id=bipa.app.bipa)
+3. Complete onboarding in the app — you'll need this to authorize agent requests.
+
+> Bipa is currently available for residents of Brazil 🇧🇷.
 
 ## Install
 
@@ -172,6 +189,9 @@ This repository hosts pre-built binaries for every release. The managed installe
 - **Website**: [agents.bipa.app](https://agents.bipa.app)
 - **Docs**: [agents.bipa.app/docs](https://agents.bipa.app/docs)
 - **Security model**: [agents.bipa.app/docs/seguranca](https://agents.bipa.app/docs/seguranca)
+- **Open an account**: [bipa.app](https://bipa.app)
+- **Mobile app — iOS**: [App Store](https://apps.apple.com/br/app/bipa/id1516842324)
+- **Mobile app — Android**: [Google Play](https://play.google.com/store/apps/details?id=bipa.app.bipa)
 - **Releases**: [github.com/bipa-app/bipa-cli/releases](https://github.com/bipa-app/bipa-cli/releases)
 - **Bug reports & feedback**: [GitHub Issues](https://github.com/bipa-app/bipa-cli/issues)
 
